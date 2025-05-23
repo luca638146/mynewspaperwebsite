@@ -74,8 +74,25 @@
         .hero p {
             font-size: 1.25rem;
             max-width: 600px;
-            margin: 0 auto;
+            margin: 0 auto 2rem auto;
             font-weight: 400;
+        }
+        .hero .btn-primary {
+            background-color: white;
+            color: #357ABD;
+            font-weight: 700;
+            padding: 0.75rem 2rem;
+            border-radius: 30px;
+            text-transform: uppercase;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .hero .btn-primary:hover {
+            background-color: #285e8e;
+            color: white;
         }
 
         main h3 {
@@ -120,11 +137,24 @@
         footer {
             background-color: #0d6efd;
             color: white;
-            padding: 1rem 0;
+            padding: 1.5rem 0;
             text-align: center;
             font-size: 0.9rem;
             margin-top: 4rem;
             box-shadow: 0 -3px 6px rgba(0,0,0,0.1);
+        }
+        footer small {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        footer nav a {
+            color: white;
+            margin: 0 0.7rem;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        footer nav a:hover {
+            color: #b3d1ff;
         }
 
         /* Responsive */
@@ -162,7 +192,8 @@
 
 <section class="hero">
     <h2>Benvenuti su Il Punto Digitale</h2>
-    <p>Il tuo giornale online di politica e tecnologia, aggiornato con articoli generati dallâ€™Intelligenza Artificiale.</p>
+    <p>Il tuo giornale online di politica e tecnologia, aggiornato con articoli generati dall’Intelligenza Artificiale.</p>
+    <a href="/chi-siamo" class="btn-primary" aria-label="Scopri di più su Il Punto Digitale">Scopri di più</a>
 </section>
 
 <main class="container">
@@ -181,7 +212,12 @@
 </main>
 
 <footer>
-    <small>Â© {{ now.Format "2006" }} Il Punto Digitale - Tutti i diritti riservati</small>
+    <small>© {{ now.Format "2006" }} Il Punto Digitale - Tutti i diritti riservati</small>
+    <nav>
+        <a href="/privacy">Privacy</a>
+        <a href="/cookie-policy">Cookie Policy</a>
+        <a href="/contatti">Contatti</a>
+    </nav>
 </footer>
 </body>
 </html>
