@@ -18,8 +18,11 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install dependencies
-        run: pip install openai feedparser transformers
+            - name: Install dependencies
+        run: |
+          pip install openai feedparser transformers
+          pip install torch
+
 
 
       - name: Genera articolo AI
