@@ -1,0 +1,89 @@
+{{/* layouts/index.html */}}
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ .Site.Title }}</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+      /* Metti qui lo stile CSS (oppure usa il tuo file esterno /css/style.css) */
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f5f8fa;
+        color: #333;
+      }
+      header, footer { background-color: #0d6efd; color: white; padding: 1rem 2rem; }
+      header a, footer small { color: white; text-decoration: none; }
+      nav a { margin-left: 1.5rem; color: white; font-weight: 600; }
+      nav a:hover { text-decoration: underline; }
+      .hero {
+        background: linear-gradient(135deg, #4a90e2, #357ABD);
+        color: white; padding: 3rem 1rem; text-align: center; border-radius: 8px;
+        box-shadow: 0 8px 15px rgba(53,122,189,0.3); margin-bottom: 3rem;
+      }
+      main {
+        max-width: 900px; margin: 0 auto; padding: 0 1rem;
+      }
+      ul.articles-list {
+        list-style: none; padding: 0;
+      }
+      ul.articles-list li {
+        background: white; margin-bottom: 1.5rem; padding: 1.5rem 2rem;
+        border-radius: 6px; box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      ul.articles-list li:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      }
+      ul.articles-list li a {
+        font-size: 1.3rem; font-weight: 700; display: block; margin-bottom: 0.3rem;
+        color: #0d6efd;
+      }
+      ul.articles-list li small {
+        color: #999; font-weight: 500; font-style: italic;
+      }
+      ul.articles-list li p {
+        margin-top: 0.5rem; color: #555;
+      }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container nav-wrapper" style="display:flex;justify-content:space-between;align-items:center;">
+        <h1><a href="/">{{ .Site.Title }}</a></h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/chi-siamo">Chi siamo</a>
+            <a href="/politica">Politica</a>
+            <a href="/contatti">Contatti</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <h2>Benvenuti su {{ .Site.Title }}</h2>
+    <p>Il tuo giornale online di politica e tecnologia, aggiornato con articoli generati dall’Intelligenza Artificiale.</p>
+</section>
+
+<main>
+    <h3>Ultimi Articoli</h3>
+    <ul class="articles-list">
+        {{ range first 5 (where .Site.RegularPages "Type" "post") }}
+        <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <small>{{ .Date.Format "02 Jan 2006" }}</small>
+            <p>{{ .Summary }}</p>
+        </li>
+        {{ else }}
+        <p>Nessun articolo disponibile.</p>
+        {{ end }}
+    </ul>
+</main>
+
+<footer>
+    <small>© {{ now.Format "2006" }} {{ .Site.Title }} - Tutti i diritti riservati</small>
+</footer>
+</body>
+</html>
