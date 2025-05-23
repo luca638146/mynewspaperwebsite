@@ -30,7 +30,7 @@ Crediamo che la politica debba essere comprensibile, trasparente, e al servizio 
 - **Contesto prima di tutto**  
   Non ci accontentiamo della notizia. Andiamo a vedere cosa c’è dietro, cosa c’era prima, e cosa potrebbe succedere dopo.
 
----
+
 
 ### 🔍 Cosa troverai in questa sezione
 
@@ -38,7 +38,7 @@ Crediamo che la politica debba essere comprensibile, trasparente, e al servizio 
 - Analisi delle leggi e dei provvedimenti più discussi  
 - Approfondimenti su temi trascurati dai media tradizionali  
 
----
+
 
 ## Perché facciamo tutto questo?
 
