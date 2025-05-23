@@ -2,8 +2,8 @@ name: auto-publish
 
 on:
   schedule:
-    - cron: '0 5,17 * * *'  # Esegue alle 7 e alle 19 ora italiana (UTC+2)
-  workflow_dispatch:       # Permette l'esecuzione manuale del workflow
+    - cron: '0 5,17 * * *'
+  workflow_dispatch:
 
 jobs:
   build-site:
