@@ -1,67 +1,38 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{ .Site.Title }}</title>
-  <link href="/css/style.css" rel="stylesheet" />
-</head>
-<body>
+{{ define "main" }}
+<header class="hero">
+  <div class="container">
+    <h1>Benvenuto su Il Punto Digitale</h1>
+    <p>Analisi politiche generate da AI, approfondimenti e informazione indipendente.</p>
+  </div>
+</header>
 
-  <nav class="navbar">
-    <div class="container">
-      <a class="brand" href="/">Il Punto Digitale</a>
-      <ul class="nav-menu">
-        <li><a href="/">Home</a></li>
-        <li><a href="/politica/">Politica</a></li>
-        <li><a href="/chi-siamo/">Chi siamo</a></li>
-        <li><a href="/contatti/">Contatti</a></li>
-      </ul>
-    </div>
-  </nav>
+<section class="highlights container">
+  <div class="highlight">
+    <h2>🧠 Cosa Facciamo</h2>
+    <ul>
+      <li>Analisi politica aggiornata e imparziale</li>
+      <li>Contenuti generati da AI basati su dati reali</li>
+      <li>Approfondimenti chiari e sintetici</li>
+    </ul>
+  </div>
 
-  <header class="hero">
-    <div class="container">
-      <h1>Benvenuto su Il Punto Digitale</h1>
-      <p>Analisi politiche generate da AI, approfondimenti e informazione indipendente.</p>
-    </div>
-  </header>
+  <div class="highlight">
+    <h2>🎯 La Nostra Missione</h2>
+    <p>Vogliamo portare chiarezza nel panorama politico, svelando i meccanismi che lo regolano con uno sguardo indipendente e tecnologico.</p>
+  </div>
 
-  <section class="highlights container">
-    <div class="highlight">
-      <h2>?? Cosa Facciamo</h2>
-      <ul>
-        <li>Analisi politica aggiornata e imparziale</li>
-        <li>Contenuti generati da AI basati su dati reali</li>
-        <li>Approfondimenti chiari e sintetici</li>
-      </ul>
-    </div>
-
-    <div class="highlight">
-      <h2>?? La Nostra Missione</h2>
-      <p>Vogliamo portare chiarezza nel panorama politico, svelando i meccanismi che lo regolano con uno sguardo indipendente e tecnologico.</p>
-    </div>
-
-    <div class="highlight">
-      <h2>?? Ultimi Articoli</h2>
-      <ul class="article-list">
-        {{ range first 3 (where .Site.RegularPages "Type" "post") }}
-          <li>
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            <small>{{ .Date.Format "02 Jan 2006" }}</small>
-          </li>
-        {{ else }}
-          <li>Nessun articolo disponibile.</li>
-        {{ end }}
-      </ul>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <small>&copy; {{ now.Format "2006" }} Il Punto Digitale - Tutti i diritti riservati</small>
-    </div>
-  </footer>
-
-</body>
-</html>
+  <div class="highlight">
+    <h2>📰 Ultimi Articoli</h2>
+    <ul class="article-list">
+      {{ range first 3 (where .Site.RegularPages "Type" "post") }}
+        <li>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <small>{{ .Date.Format "02 Jan 2006" }}</small>
+        </li>
+      {{ else }}
+        <li>Nessun articolo disponibile.</li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+{{ end }}

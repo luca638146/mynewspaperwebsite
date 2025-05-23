@@ -32,5 +32,25 @@ Oppure visita il nostro profilo GitHub per collaborare.&lt;/p&gt;</description>
       <guid>http://localhost:1313/posts/example/</guid>
       <description>&lt;p&gt;Questo è il contenuto del primo articolo generato.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/politica/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/politica/</guid>
+      <description>&lt;h2 id=&#34;la-nostra-visione-politica&#34;&gt;La Nostra Visione Politica&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Seguiamo la politica per capirla, smascherarla, raccontarla.&lt;/strong&gt;&lt;br&gt;
+Crediamo che la politica debba essere comprensibile, trasparente, e al servizio di tutti. Il nostro impegno è raccontare il potere senza servilismi, svelando le dinamiche reali dietro slogan e promesse.&lt;/p&gt;
+&lt;h3 id=&#34;-i-nostri-obiettivi&#34;&gt;🎯 I Nostri Obiettivi&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Decodificare il linguaggio politico&lt;/strong&gt;: rendere accessibili i concetti chiave, le leggi, i decreti, le manovre economiche.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Analizzare, non semplificare&lt;/strong&gt;: ogni articolo mira a scavare a fondo, senza piegarsi a narrative preconfezionate.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vigilare sul potere&lt;/strong&gt;: chi governa deve sapere che c’è chi guarda, legge, capisce e scrive.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-come-lavoriamo&#34;&gt;🧠 Come Lavoriamo&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Fonti trasparenti&lt;/strong&gt;&lt;br&gt;
+Ogni dato riportato è verificato e consultabile. Nessun mistero, nessuna scorciatoia.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
