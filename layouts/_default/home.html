@@ -1,28 +1,51 @@
 {{ define "main" }}
-<header class="hero">
-  <div class="container">
-    <h1>Benvenuto su Il Punto Digitale</h1>
-    <p>Analisi politiche generate da AI, approfondimenti e informazione indipendente.</p>
-  </div>
-</header>
 
-<section class="highlights container">
-  <div class="highlight">
-    <h2>🧠 Cosa Facciamo</h2>
-    <ul>
-      <li>Analisi politica aggiornata e imparziale</li>
-      <li>Contenuti generati da AI basati su dati reali</li>
-      <li>Approfondimenti chiari e sintetici</li>
-    </ul>
-  </div>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <h1>Benvenuto su Il Punto Digitale</h1>
+      <p>Analisi politiche generate da AI, approfondimenti e informazione indipendente.</p>
+      <a href="/politica/" class="btn">Scopri di più</a>
+    </div>
+  </header>
 
-  <div class="highlight">
-    <h2>🎯 La Nostra Missione</h2>
-    <p>Vogliamo portare chiarezza nel panorama politico, svelando i meccanismi che lo regolano con uno sguardo indipendente e tecnologico.</p>
-  </div>
+  <!-- Reviews Section -->
+  <section class="reviews container">
+    <h2>📣 Dicono di noi</h2>
+    <div class="review">
+      <blockquote>"Finalmente un sito che taglia il rumore e va dritto al punto."</blockquote>
+      <cite>— Marco, studente</cite>
+    </div>
+    <div class="review">
+      <blockquote>"Utile, diretto, con contenuti generati da AI davvero ben fatti."</blockquote>
+      <cite>— Giulia, analista politica</cite>
+    </div>
+    <div class="review">
+      <blockquote>"La mia nuova fonte preferita per capire la politica italiana."</blockquote>
+      <cite>— Luca, giornalista</cite>
+    </div>
+  </section>
 
-  <div class="highlight">
-    <h2>📰 Ultimi Articoli</h2>
+  <!-- Highlights Section -->
+  <section class="highlights container">
+    <div class="highlight">
+      <h2>🧠 Cosa Facciamo</h2>
+      <ul>
+        <li>Analisi politica aggiornata e imparziale</li>
+        <li>Contenuti generati da AI basati su dati reali</li>
+        <li>Approfondimenti chiari e sintetici</li>
+      </ul>
+    </div>
+
+    <div class="highlight">
+      <h2>🎯 La Nostra Missione</h2>
+      <p>Portare chiarezza nel panorama politico, svelando i meccanismi che lo regolano con uno sguardo indipendente e tecnologico.</p>
+    </div>
+  </section>
+
+  <!-- Featured Articles Section -->
+  <section class="featured-articles container">
+    <h2>📰 In Evidenza</h2>
     <ul class="article-list">
       {{ range first 3 (where .Site.RegularPages "Type" "post") }}
         <li>
@@ -33,6 +56,6 @@
         <li>Nessun articolo disponibile.</li>
       {{ end }}
     </ul>
-  </div>
-</section>
+  </section>
+
 {{ end }}
