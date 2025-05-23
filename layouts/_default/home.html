@@ -1,21 +1,67 @@
-{{ define "main" }}
-<section class="hero" style="background:none; color:#222; padding:2rem 1rem; text-align:center;">
-  <h2>Benvenuti su {{ .Site.Title }}</h2>
-  <p>Il tuo giornale online di politica e tecnologia, aggiornato con articoli generati dall’Intelligenza Artificiale.</p>
-</section>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ .Site.Title }}</title>
+  <link href="/css/style.css" rel="stylesheet" />
+</head>
+<body>
 
-<main>
-  <h3>Ultimi Articoli</h3>
-  <ul style="list-style:none; padding:0;">
-    {{ range first 5 (where .Site.RegularPages "Type" "post") }}
-      <li style="background:#fff; margin-bottom:1rem; padding:1rem; border-radius:6px; box-shadow:0 3px 8px rgba(0,0,0,0.05); transition: all 0.3s;">
-        <a href="{{ .RelPermalink }}" style="color:#222; font-weight:700; font-size:1.2rem; text-decoration:none;">{{ .Title }}</a><br />
-        <small style="color:#666; font-style:italic;">{{ .Date.Format "02 Jan 2006" }}</small>
-        <p style="color:#555;">{{ .Summary }}</p>
-      </li>
-    {{ else }}
-      <p>Nessun articolo disponibile.</p>
-    {{ end }}
-  </ul>
-</main>
-{{ end }}
+  <nav class="navbar">
+    <div class="container">
+      <a class="brand" href="/">Il Punto Digitale</a>
+      <ul class="nav-menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/politica/">Politica</a></li>
+        <li><a href="/chi-siamo/">Chi siamo</a></li>
+        <li><a href="/contatti/">Contatti</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <h1>Benvenuto su Il Punto Digitale</h1>
+      <p>Analisi politiche generate da AI, approfondimenti e informazione indipendente.</p>
+    </div>
+  </header>
+
+  <section class="highlights container">
+    <div class="highlight">
+      <h2>?? Cosa Facciamo</h2>
+      <ul>
+        <li>Analisi politica aggiornata e imparziale</li>
+        <li>Contenuti generati da AI basati su dati reali</li>
+        <li>Approfondimenti chiari e sintetici</li>
+      </ul>
+    </div>
+
+    <div class="highlight">
+      <h2>?? La Nostra Missione</h2>
+      <p>Vogliamo portare chiarezza nel panorama politico, svelando i meccanismi che lo regolano con uno sguardo indipendente e tecnologico.</p>
+    </div>
+
+    <div class="highlight">
+      <h2>?? Ultimi Articoli</h2>
+      <ul class="article-list">
+        {{ range first 3 (where .Site.RegularPages "Type" "post") }}
+          <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <small>{{ .Date.Format "02 Jan 2006" }}</small>
+          </li>
+        {{ else }}
+          <li>Nessun articolo disponibile.</li>
+        {{ end }}
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <small>&copy; {{ now.Format "2006" }} Il Punto Digitale - Tutti i diritti riservati</small>
+    </div>
+  </footer>
+
+</body>
+</html>
