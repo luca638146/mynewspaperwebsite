@@ -1,21 +1,23 @@
 {{ define "main" }}
-<section class="hero">
-  <h2>Benvenuti su {{ .Site.Title }}</h2>
-  <p>Il tuo giornale online di politica e tecnologia, aggiornato con articoli generati dall'Intelligenza Artificiale.</p>
+<section>
+    <h2>Benvenuti su {{ .Site.Title }}</h2>
+    <p style="font-size:1.1rem; max-width: 600px; margin-bottom: 3rem; color:#444;">
+        Il tuo giornale online di politica e tecnologia, aggiornato con articoli generati dall’Intelligenza Artificiale.
+    </p>
 </section>
 
-<section class="articles container">
-  <h3>Ultimi Articoli</h3>
-  <ul class="articles-list">
-    {{ range first 5 (where .Site.RegularPages "Type" "post") }}
-      <li>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        <small>{{ .Date.Format "02 Jan 2006" }}</small>
-        <p>{{ .Summary }}</p>
-      </li>
-    {{ else }}
-      <p>Nessun articolo disponibile.</p>
-    {{ end }}
-  </ul>
+<section>
+    <h3>Ultimi Articoli</h3>
+    <ul class="articles-list">
+        {{ range first 5 (where .Site.RegularPages "Type" "post") }}
+        <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <small>{{ .Date.Format "02 Jan 2006" }}</small>
+            <p>{{ .Summary }}</p>
+        </li>
+        {{ else }}
+        <p>Nessun articolo disponibile.</p>
+        {{ end }}
+    </ul>
 </section>
 {{ end }}

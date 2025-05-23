@@ -1,42 +1,144 @@
 <!DOCTYPE html>
 <html lang="it">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>404 Page not found</title>
-
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  
-  <link href="/css/style.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Il Punto Digitale</title>
+    <style>
+         
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            background: #fff;
+            color: #222;
+            line-height: 1.6;
+        }
+        a {
+            color: #000;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+        a:hover {
+            border-color: #000;
+        }
+        header {
+            background: #fff;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        header .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 a {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: #000;
+            letter-spacing: 1px;
+        }
+        nav a {
+            margin-left: 1.5rem;
+            font-weight: 600;
+            font-size: 1rem;
+            color: #333;
+        }
+        nav a:hover {
+            color: #000;
+        }
+        main {
+            margin-top: 2rem;
+        }
+        h2, h3 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #111;
+        }
+        ul.articles-list {
+            list-style: none;
+            padding: 0;
+        }
+        ul.articles-list li {
+            background: #fff;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem 2rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: box-shadow 0.3s ease;
+        }
+        ul.articles-list li:hover {
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+        ul.articles-list li a {
+            font-size: 1.25rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #000;
+        }
+        ul.articles-list li small {
+            color: #666;
+            font-weight: 500;
+            font-style: italic;
+        }
+        ul.articles-list li p {
+            margin-top: 0.5rem;
+            color: #444;
+        }
+        footer {
+            margin-top: 4rem;
+            padding: 1rem 0;
+            border-top: 1px solid #eee;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+         
+        @media (max-width: 600px) {
+            header .nav-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav a {
+                margin-left: 0;
+                margin-top: 0.7rem;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-
-  
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/">Giornale Politico AI</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" 
-        aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarMenu">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link " href="/">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="/politica/">Politica</a></li>
-          <li class="nav-item"><a class="nav-link" href="/chi-siamo/">Chi Siamo</a></li>
-        </ul>
-      </div>
+<header>
+    <div class="container nav-wrapper">
+        <h1><a href="/">Il Punto Digitale</a></h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/chi-siamo">Chi siamo</a>
+            <a href="/politica">Politica</a>
+            <a href="/contatti">Contatti</a>
+        </nav>
     </div>
-  </nav>
+</header>
 
-  
-  <main class="container my-5">
+<main class="container">
     
 <div class="not-found">404</div>
-  </main>
+</main>
 
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<footer>
+    <small>© 2025 Il Punto Digitale - Tutti i diritti riservati</small>
+</footer>
 </body>
 </html>
