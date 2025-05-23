@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-	<meta name="generator" content="Hugo 0.147.5"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Il Punto Digitale</title>
+    <title>{{ .Site.Title }}</title>
     <link rel="stylesheet" href="/css/style.css" />
     <style>
-         
+        /* Reset base */
         * {
             margin: 0; padding: 0; box-sizing: border-box;
         }
@@ -158,7 +157,7 @@
             color: #b3d1ff;
         }
 
-         
+        /* Responsive */
         @media (max-width: 600px) {
             header .nav-wrapper {
                 flex-direction: column;
@@ -181,7 +180,7 @@
 <body>
 <header>
     <div class="container nav-wrapper">
-        <h1><a href="/">Il Punto Digitale</a></h1>
+        <h1><a href="/">{{ .Site.Title }}</a></h1>
         <nav>
             <a href="/">Home</a>
             <a href="/chi-siamo">Chi siamo</a>
@@ -193,21 +192,27 @@
 
 <section class="hero">
     <h2>Benvenuti su Il Punto Digitale</h2>
-    <p>Il tuo giornale online di politica e tecnologia, aggiornato con articoli generati dallâ€™Intelligenza Artificiale.</p>
-    <a href="/chi-siamo" class="btn-primary" aria-label="Scopri di piÃ¹ su Il Punto Digitale">Scopri di piÃ¹</a>
+    <p>Il tuo giornale online di politica e tecnologia, aggiornato con articoli generati dall’Intelligenza Artificiale.</p>
+    <a href="/chi-siamo" class="btn-primary" aria-label="Scopri di più su Il Punto Digitale">Scopri di più</a>
 </section>
 
 <main class="container">
     <h3>Ultimi Articoli</h3>
     <ul class="articles-list">
-        
+        {{ range first 5 (where .Site.RegularPages "Type" "post") }}
+        <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <small>{{ .Date.Format "02 Jan 2006" }}</small>
+            <p>{{ .Summary }}</p>
+        </li>
+        {{ else }}
         <p>Nessun articolo disponibile.</p>
-        
+        {{ end }}
     </ul>
 </main>
 
 <footer>
-    <small>Â© 2025 Il Punto Digitale - Tutti i diritti riservati</small>
+    <small>© {{ now.Format "2006" }} Il Punto Digitale - Tutti i diritti riservati</small>
     <nav>
         <a href="/privacy">Privacy</a>
         <a href="/cookie-policy">Cookie Policy</a>
@@ -216,4 +221,3 @@
 </footer>
 </body>
 </html>
-
