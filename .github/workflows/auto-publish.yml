@@ -1,6 +1,14 @@
+name: auto-publish
+
+on:
+  schedule:
+    - cron: '0 5,17 * * *'  # Esegue alle 7 e alle 19 ora italiana (UTC+2)
+  workflow_dispatch:       # Permette di eseguire manualmente il workflow da GitHub
+
 jobs:
   build-site:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -14,13 +22,13 @@ jobs:
         run: |
           pip install openai feedparser transformers torch
 
+      - name: Ensure posts directory exists
+        run: mkdir -p content/posts
+
       - name: Genera articolo AI
         run: python scripts/genera_articoli.py
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-
-      - name: Ensure posts directory exists
-        run: mkdir -p content/posts
 
       - name: Commit new article
         run: |
@@ -29,3 +37,4 @@ jobs:
           git add content/posts/*.md
           git commit -m "📝 Nuovo articolo generato automaticamente" || echo "Nessun nuovo articolo"
           git push
+
