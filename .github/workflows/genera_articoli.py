@@ -2,7 +2,6 @@ import os
 from datetime import datetime
 import openai
 
-# Usa la variabile d'ambiente per maggiore sicurezza
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def genera_articolo(titolo):
