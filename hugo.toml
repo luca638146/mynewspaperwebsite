@@ -1,30 +1,52 @@
-baseURL = "https://github.com/luca638146/mynewspaperwebsite.git"
-languageCode = "it-it"
-title = "Giornale Politico AI"
-theme = "ananke"
-enableRobotsTXT = true
+baseURL = "https://tuosito.github.io/"  # Cambia questo con l'URL del tuo sito se usi GitHub Pages
+languageCode = "it"
+title = "Il Punto Digitale"
+theme = "PaperMod"
+[pagination]
+pagerSize = 10
 
 [params]
-  description = "Due articoli di politica al giorno generati da IA."
   author = "Redazione AI"
+  description = "Un giornale italiano generato con intelligenza artificiale"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  hideFooter = false
+  defaultTheme = "auto" # dark, light, auto
+
+[params.homeInfoParams]
+  Title = "Benvenuto su Giornale Politico AI"
+  Content = "Notizie generate con intelligenza artificiale, aggiornate quotidianamente. Leggi, condividi e rimani informato."
 
 [menu]
+
   [[menu.main]]
+    identifier = "home"
     name = "Home"
-    url  = "/"
+    url = "/"
     weight = 1
 
   [[menu.main]]
+    identifier = "politica"
     name = "Politica"
-    url  = "/politica/"
+    url = "/categories/politica/"
     weight = 2
 
   [[menu.main]]
+    identifier = "chi-siamo"
     name = "Chi siamo"
-    url  = "/about/"
+    url = "/chi-siamo/"
     weight = 3
 
-[sitemap]
-  changefreq = "hourly"
-  priority   = 0.5
+  [[menu.main]]
+    identifier = "contatti"
+    name = "Contatti"
+    url = "/contatti/"
+    weight = 4
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

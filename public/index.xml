@@ -1,18 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Giornale Politico AI</title>
-    <link>http://localhost:1313/luca638146/mynewspaperwebsite.git/</link>
-    <description>Recent content on Giornale Politico AI</description>
-    <generator>Hugo</generator>
-    <language>it-it</language>
-    <lastBuildDate>Fri, 23 May 2025 10:00:00 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/luca638146/mynewspaperwebsite.git/index.xml" rel="self" type="application/rss+xml" />
+    <title>Il Punto Digitale</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Il Punto Digitale</description>
+    <generator>Hugo -- 0.147.5</generator>
+    <language>it</language>
+    <lastBuildDate>Fri, 23 May 2025 10:00:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chi siamo</title>
+      <link>http://localhost:1313/chi-siamo/</link>
+      <pubDate>Fri, 23 May 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/chi-siamo/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Giornale Politico AI&lt;/strong&gt; è un progetto editoriale alimentato dall&amp;rsquo;intelligenza artificiale.&lt;br&gt;
+Ogni giorno pubblichiamo articoli di attualità e politica generati automaticamente con modelli avanzati, per informare in modo innovativo e imparziale.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Contatti</title>
+      <link>http://localhost:1313/contatti/</link>
+      <pubDate>Fri, 23 May 2025 10:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/contatti/</guid>
+      <description>&lt;p&gt;Hai domande o suggerimenti?&lt;br&gt;
+Scrivici via email: &lt;a href=&#34;mailto:redazione@ai-giornale.it&#34;&gt;redazione@ai-giornale.it&lt;/a&gt;&lt;br&gt;
+Oppure visita il nostro profilo GitHub per collaborare.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Primo articolo di esempio</title>
-      <link>http://localhost:1313/luca638146/mynewspaperwebsite.git/posts/example/</link>
+      <link>http://localhost:1313/posts/example/</link>
       <pubDate>Fri, 23 May 2025 10:00:00 +0200</pubDate>
-      <guid>http://localhost:1313/luca638146/mynewspaperwebsite.git/posts/example/</guid>
+      <guid>http://localhost:1313/posts/example/</guid>
       <description>&lt;p&gt;Questo è il contenuto del primo articolo generato.&lt;/p&gt;</description>
     </item>
   </channel>
