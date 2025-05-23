@@ -1,110 +1,21 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{{ .Site.Title }}</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <style>
-      /* Qui inserisci il tuo CSS personalizzato */
-      body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: #f0f2f5;
-        color: #222;
-        margin: 0;
-      }
-      header {
-        background-color: #003366;
-        color: white;
-        padding: 1rem 2rem;
-      }
-      header h1 a {
-        color: white;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 1.8rem;
-      }
-      nav a {
-        color: white;
-        margin-left: 2rem;
-        text-decoration: none;
-        font-weight: 600;
-      }
-      nav a:hover {
-        text-decoration: underline;
-      }
-      .hero {
-        background: linear-gradient(90deg, #0066cc, #004080);
-        color: white;
-        padding: 4rem 1rem;
-        text-align: center;
-      }
-      main {
-        max-width: 900px;
-        margin: 2rem auto;
-        padding: 0 1rem;
-      }
-      ul.articles-list {
-        list-style: none;
-        padding: 0;
-      }
-      ul.articles-list li {
-        background: white;
-        margin-bottom: 1rem;
-        padding: 1rem 1.5rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      }
-      ul.articles-list li a {
-        font-weight: 700;
-        color: #003366;
-        font-size: 1.2rem;
-        text-decoration: none;
-      }
-      ul.articles-list li a:hover {
-        text-decoration: underline;
-      }
-      footer {
-        text-align: center;
-        padding: 1rem;
-        background: #003366;
-        color: white;
-        margin-top: 3rem;
-      }
-    </style>
-</head>
-<body>
-  <header>
-    <h1><a href="/">{{ .Site.Title }}</a></h1>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/chi-siamo">Chi siamo</a>
-      <a href="/politica">Politica</a>
-      <a href="/contatti">Contatti</a>
-    </nav>
-  </header>
+{{ define "main" }}
+<section class="hero">
+  <h2>Benvenuti su {{ .Site.Title }}</h2>
+  <p>Il tuo giornale online di politica e tecnologia, aggiornato con articoli generati dall'Intelligenza Artificiale.</p>
+</section>
 
-  <section class="hero">
-    <h2>Benvenuti su {{ .Site.Title }}</h2>
-    <p>Il tuo giornale online aggiornato con articoli di politica e tecnologia generati dall'Intelligenza Artificiale.</p>
-  </section>
-
-  <main>
-    <h3>Ultimi Articoli</h3>
-    <ul class="articles-list">
-      {{ range first 5 (where .Site.RegularPages "Type" "post") }}
+<section class="articles container">
+  <h3>Ultimi Articoli</h3>
+  <ul class="articles-list">
+    {{ range first 5 (where .Site.RegularPages "Type" "post") }}
       <li>
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <small>{{ .Date.Format "02 Jan 2006" }}</small>
         <p>{{ .Summary }}</p>
       </li>
-      {{ else }}
+    {{ else }}
       <p>Nessun articolo disponibile.</p>
-      {{ end }}
-    </ul>
-  </main>
-
-  <footer>
-    <small>© {{ now.Format "2006" }} {{ .Site.Title }} - Tutti i diritti riservati</small>
-  </footer>
-</body>
-</html>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
