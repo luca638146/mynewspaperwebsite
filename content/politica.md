@@ -1,15 +1,14 @@
----
+
 title: "Politica"
 date: 2024-01-01
 draft: false
----
+
 
 ## La Nostra Visione Politica
 
 **Seguiamo la politica per capirla, smascherarla, raccontarla.**  
 Crediamo che la politica debba essere comprensibile, trasparente, e al servizio di tutti. Il nostro impegno è raccontare il potere senza servilismi, svelando le dinamiche reali dietro slogan e promesse.
 
----
 
 ### 🎯 I Nostri Obiettivi
 
@@ -17,7 +16,7 @@ Crediamo che la politica debba essere comprensibile, trasparente, e al servizio 
 - **Analizzare, non semplificare**: ogni articolo mira a scavare a fondo, senza piegarsi a narrative preconfezionate.  
 - **Vigilare sul potere**: chi governa deve sapere che c’è chi guarda, legge, capisce e scrive.  
 
----
+
 
 ### 🧠 Come Lavoriamo
 
