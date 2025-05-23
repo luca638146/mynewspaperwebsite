@@ -2,8 +2,8 @@ name: auto-publish
 
 on:
   schedule:
-    - cron: '0 5,17 * * *'
-  workflow_dispatch:
+    - cron: '0 5,17 * * *'  # Esegue alle 7:00 e 19:00 ora italiana (UTC+2)
+  workflow_dispatch:         # Permette di avviare manualmente il workflow da GitHub
 
 jobs:
   build-site:
@@ -40,3 +40,4 @@ jobs:
             git push
           else
             echo "Nessun nuovo articolo da commitare"
+          fi
