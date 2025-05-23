@@ -1,0 +1,30 @@
+baseURL = "https://github.com/luca638146/mynewspaperwebsite.git"
+languageCode = "it-it"
+title = "Giornale Politico AI"
+theme = "ananke"
+enableRobotsTXT = true
+
+[params]
+  description = "Due articoli di politica al giorno generati da IA."
+  author = "Redazione AI"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url  = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Politica"
+    url  = "/politica/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Chi siamo"
+    url  = "/about/"
+    weight = 3
+
+[sitemap]
+  changefreq = "hourly"
+  priority   = 0.5
+
